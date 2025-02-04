@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/favicon.ico" type="svg+xml">
+    <link rel="stylesheet" href="main.js">
+    <title>紫苑大学 | 募金・寄付</title>
+    
+</head>
+<body>
+    <header>
+        <div class="img">
+            <a href="index.html"><img src="img/rogo.png" alt="紫苑大学のロゴ" id="logo"></a>
+            <p style="cursor: pointer; text-decoration: none; border: none;">紫苑大学 募金サイト</p>
+        </div>
+        <nav>
+            <a href="#">ご支援のお願い</a>
+            <a href="#">ご寄付・募金</a>
+            <a href="#">メッセージ</a>
+            <a href="#">ボランティア活動</a>
+            <a href="#">その他</a>
+        </nav>
+        <div class="buttons">
+            <button class="lang-button">言語切替</button>
+            <button class="access-button">お問い合わせ</button>
+        </div>
+    </header>
+
+    <div class="hero-image">
+        <img style="width: 100%; height: 480px; opacity: 50%;" src="img/bokinkatudou_Image.jpg" alt="募金活動">
+    </div>
+
+    <main>
+        <section class="news">
+            <h2>ニュース</h2>
+            <ul>
+                <li>2025年1月 新年の挨拶を更新しました。</li>
+                <li>2024年12月 ボランティア動画のハイライトを公開しました。</li>
+                <li>2024年11月 2024年度 ボランティアの募集を開始しました。</li>
+            </ul>
+        </section>
+
+        <section class="topics">
+            <h2>トピック</h2>
+            <ul>
+                <li>学生ボランティア活動を紹介する特集記事。</li>
+                <li>次年度のボランティア活動を公開しました。</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        &copy; 2025 紫苑大学 留学サイト. All rights reserved.
+    </footer>
+    
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        header img {
+            width: 120px;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+        header img:hover {
+            transform: scale(1.1);
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        
+        }
+        nav a {
+            text-decoration: none;
+            color: #000000;
+            font-weight: bold;
+            font-size: 16px;
+            position: relative;
+        }
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: #000000;
+            left: 0;
+            bottom: -5px;
+            transition: width 0.3s ease;
+        }
+        nav a:hover::after {
+            width: 100%;
+        }
+        .buttons {
+            display: flex;
+            gap: 15px;
+        }
+        .buttons button {
+            padding: 8px 15px;
+            font-size: 14px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .lang-button {
+            background-color: #000000;
+            color: white;
+        }
+        .lang-button:hover {
+            background-color: #747373;
+        }
+        .access-button {
+            background-color: #000000;
+            color: white;
+        }
+        .access-button:hover {
+            background-color: #656565;
+        }
+    
+        .img img{
+            width: 60px;
+            height: 60px;
+        }
+
+        .img{
+            display: flex;
+        }
+
+        .img p{
+            font-size: 28px;
+            font-family: HGS創英ﾌﾟﾚｾﾞﾝｽEB;
+            margin-top: 16px;
+            margin-left: 10px;
+        }
+        
+        .hero-image {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .hero-image img {
+            width: 100%;
+            max-height: 650px;
+            object-fit: cover;
+        }
+        main {
+            padding: 20px;
+        }
+        .news, .topics {
+            margin-top: 20px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease;
+        }
+        .news h2, .topics h2 {
+            margin: 0 0 10px;
+            color: #000000;
+        }
+        .news ul, .topics ul {
+            list-style: none;
+            padding: 0;
+        }
+        .news li, .topics li {
+            margin-bottom: 10px;
+        }
+        footer {
+            margin-top: 20px;
+            background-color: #000000;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</body>
+<script>
+    document.getElementById("vdbanner")?.remove();
+
+    const targetId = 'vdbanner';
+    // ページの内容が変化するたびに監視
+    const observer = new MutationObserver(() => {
+        const adElement = document.getElementById(targetId);
+        if (adElement) {
+            adElement.remove();
+            console.log(`Removed element with id: ${targetId}`);
+        }
+    });
+    // 監視の設定
+        observer.observe(document.body, {
+        childList: true, // 子要素の追加・削除を監視
+        subtree: true    // サブツリーも監視
+    });
+</script>
+</html>
