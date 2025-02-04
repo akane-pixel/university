@@ -1,0 +1,410 @@
+::-webkit-scrollbar {
+    width: 2px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-track {
+    opacity: 80%;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #5c0656;
+    opacity: 80%;
+}
+
+.fast_view{
+    margin: auto 0;
+}
+
+img#rogo_size {
+    margin-top: 20px;
+    margin-left: 40px;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+
+#daigaku_name{
+    list-style: none;
+    text-decoration: none;
+    font-size: 30px;
+    font-family: HGS創英ﾌﾟﾚｾﾞﾝｽEB;
+    color: #707070;
+    flex-grow: 1; /* タイトルが余白を広げる */
+    cursor: pointer;
+    position: absolute;
+    top: 33px;
+    left: 120px;
+}
+.dropdown:hover{
+    color: #661c72;
+}
+
+.hr_open li{
+    border:solid #333 1px;
+    width: 400px;
+    height: 50px;
+    font-size: 12px;
+    padding-left: 20px;
+    padding-top: 14px;
+    
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em 1em;
+    color: rgb(0, 0, 0);
+    position: relative;
+    left: -80px;
+    z-index: 10;
+}
+
+.nav-links ul {
+    display: flex;
+    list-style: none;
+    margin-left: 520px;
+    margin-top: -53px;
+    padding: 0;
+}
+
+.nav-links ul li {
+    position: relative;
+    margin-left: 2.5em;
+    letter-spacing: 2px;
+    top: 15px;
+    left: -15px;
+}
+
+.nav-links ul li a:hover{
+    color: #801890;
+    transition: all ease 0.3s;
+}
+
+.nav-links ul li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 12px;
+    font-weight: bold;
+    transition: all ease 0.3s;
+}
+
+.dropdown-content {
+    display: none;
+    position: fixed; /* 固定配置に変更 */
+    top: 74px;
+    left: 0;
+    width: 100vw; /* 画面全体の横幅を占有 */
+    height: 100vh; /* 画面全体の高さを占有 */  
+    background-color: rgba(244, 244, 244, 0.98); /* 少し透明感を持たせる */  
+    color: black;
+    overflow-y: auto;
+    padding: 2em;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+.dropdown-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 50px;
+    left: 400px;
+}
+
+.dropdown-content ul li {
+    margin-bottom: 1em;
+}
+
+.dropdown-content ul li a {
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+.nav-links ul {
+    display: none;
+    flex-direction: column;
+    background-color: #003366;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 200px;
+}
+
+.nav-links ul.active {
+    display: flex;
+}
+
+.menu-toggle {
+    display: flex;
+}
+}
+
+
+.fast_view_sionuniversity_this img{
+    margin-top: 20px;
+    width: 100%;
+    height: 500px;
+    opacity: 55%;
+}
+
+.fast_view_sionuniversity_this p{
+    position: absolute;
+    top: 250px;
+    left: 120px;
+    z-index: 2;
+    font-size: 30px;
+    font-weight: bold;
+    opacity: 60%;
+    font-family: HGS創英ﾌﾟﾚｾﾞﾝｽEB;
+}
+
+.sionuniversity_this_p{
+    margin-top: 75px;
+    font-size: 25px;
+    font-weight: bold;
+    margin-left: 50px;
+}
+
+.sionuniversity_this_p_1{
+    margin-top: 20px;
+    font-size: 14.5px;
+    margin-left: 50px;
+    letter-spacing: 1px;
+}
+
+.sionuniversity_this_p_2{
+    margin-top: 30px;
+    font-size: 25px;
+    font-weight: bold;
+    margin-left: 50px;
+}
+
+.sionuniversity_this_box{
+    margin-top: 20px;
+    display: block;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background-color: #f2f2f2;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all ease 0.5s;
+}
+
+.sionuniversity_this_box img{
+    z-index: 1;
+    width: 250px;
+    height: 200px;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding: auto 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    opacity: 80%;
+}
+
+.sionuniversity_this_box p{
+    z-index: 1;
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    opacity: 80%;
+}
+
+.sionuniversity_this_box button{
+    z-index: 1;
+    margin-top: 14px;
+    width: 150px;
+    height: 50px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+    background-color: #661c72;
+    color: #fff;
+    margin-bottom: 20px;
+    transition: all ease 0.5s;
+}
+
+.sionuniversity_this_box_this{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    transition: all ease 0.5s;
+}
+
+.sionuniversity_this_box:hover{
+    transform: translateY(-5px);
+    transition: all ease 0.5s;
+}
+
+.sionuniversity_this_box button:hover{
+    background-color: #333;
+    transition: all ease 0.5s;
+}
+
+.sionuniversity_this_box_2{
+    margin-top: 30px;
+    background-color: #cecece;
+    width: 300px;
+}
+
+.sionuniversity_this_box_2 img{
+    width: 300px;
+    height: auto;
+    cursor: pointer;
+}
+
+.sionuniversity_this_box_2 p{
+    text-align: center;
+    margin-top: 10px;
+    font-size: 12px;
+    padding-bottom: 10px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.sionuniversity_this_box_2_this{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 1rem;
+    transition: all ease 0.5s;
+}
+
+.gakka_name{
+    margin-left: 60px;
+    margin-top: 80px;
+    margin-bottom: 40px;
+    font-size: 40px;
+    font-family: HGS創英ﾌﾟﾚｾﾞﾝｽEB;
+    opacity:60%;
+}
+
+.gakka_name_1{
+    margin-left: 60px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    font-size: 40px;
+    font-family: HGS創英ﾌﾟﾚｾﾞﾝｽEB;
+    opacity:60%;
+}
+
+.rogo_fotter{
+    display: flex;
+    margin-top: 10px;
+}
+
+.rogo_fotter img{
+    width: 50px;
+    height: 50px;
+    margin-left: 35px;
+}
+
+.rogo_fotter p{
+    margin: auto 0;
+    margin-left: 10px;
+    font-size: 25px;
+    font-family: HGS創英ﾌﾟﾚｾﾞﾝｽEB;
+    opacity: 50%;
+}
+
+.footer_img img{
+    width: 100%;
+    height: 460px;
+    position: absolute;
+    opacity: 70%;
+}
+
+.sns_logo{
+    align-items: center;
+    text-align: center;
+}
+
+.sns_logo img{
+    box-shadow: rgba(0, 0, 0, 0.2);
+    position: relative;
+    color: #fff;
+    top: 380px;
+    width: 45px;
+    height: 45px;
+    margin-left: 40px;
+    z-index: 10;
+    color: #fff;
+    cursor: pointer;
+}
+
+.sns_logo img:hover{
+    color: #fff;
+    transition: all ease 0.5s;
+}
+
+footer{
+    z-index: 9;
+}
+
+/* トップへ戻るボタンのスタイル */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #5e2073;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    width: 50px;
+    height: 50px;
+    display: none; /* 初期状態は非表示 */
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+    z-index: 100;
+  }
+  
+  .back-to-top:hover {
+    background-color: #9e38ac;
+    transform: scaleY(-5px);
+  }
+  
+  .back-to-top.show {
+    display: flex; /* 表示 */
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+  }
+  
+  .back-to-top.hide {
+    opacity: 0;
+    transform: translateY(20px);
+  }

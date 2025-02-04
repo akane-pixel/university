@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>総合型選抜エントリーフォーム</title>
+    <link rel="stylesheet" href="form.css">
+    <link rel="stylesheet" href="from.php">
+    <link rel="icon" href="img/favicon.ico" type="svg+xml">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="main.js">
+</head>
+<body>
+    <div class="fast_view">
+        <img class="rogo_size" src="img/rogo.png" style="margin-top: 15px;" alt="ロゴ" >
+        <a id="daigaku_name" style="margin-top: 15px;" href="index.html">紫苑大学</a>
+    </div>
+    <P class="topic_name">総合型選抜エントリーに関する注意事項</P>
+    <p class="topic_name_3">総合型選抜エントリーをご検討中の皆様へ、エントリー時の注意事項を以下の通りご案内いたします</p>
+    <p class="topic_name_3">募集要項に記載されているエントリー資格を必ずご確認ください。資格を満たしていない場合、選考対象外となります。<br>
+    <p class="topic_name_3">
+      エントリーには以下の書類が必要です<br>
+      志望理由書<br>
+      学業成績書<br>
+      在学証明書<br>
+      記入漏れや不備がある場合は受け付けられませんので、提出前に内容をよく確認してください
+    </p>
+    <p class="topic_name_3">提出は郵送またはオンラインで受け付けます。必須期限を過ぎた書類は受付できませんので、余裕を持って提出してください</p>
+    <p class="topic_name_3">選考日程および面接場所は後日ご案内いたします。 当面、指定された日程に参加できない場合は事前にご連絡ください</p>
+    <p class="topic_name_3">エントリー後のキャンセルをご希望の場合は、早期に紫苑大学事務局までご連絡ください</p>
+    <p class="topic_name_3" style="margin-bottom: 90px;">エントリーに関するお問い合わせに関するご質問は以下までお問い合わせください。<br>
+      example@shion@university.com 000-0000-0000</p>
+
+    <h1>総合型選抜エントリーフォーム</h1>
+
+    <form action="submit.php" method="POST">
+        <label for="name">名前:</label>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="furigana">フリガナ:</label>
+        <input type="text" id="furigana" name="furigana" required><br>
+
+        <label for="applicant">お申込みの方:</label>
+        <input type="text" id="applicant" name="applicant" required><br>
+
+        <label for="birth_date">生年月日:</label>
+        <input type="date" id="birth_date" name="birth_date" required><br>
+
+        <label for="occupation">学年・職業:</label>
+        <input type="text" id="occupation" name="occupation" required><br>
+
+        <label for="school_name">学校名:</label>
+        <input type="text" id="school_name" name="school_name"><br>
+
+        <label for="postal_code">郵便番号:</label>
+        <input type="text" id="postal_code" name="postal_code" required><br>
+
+        <label for="prefecture">都道府県:</label>
+        <input type="text" id="prefecture" name="prefecture" required><br>
+
+        <label for="address">住所:</label>
+        <input type="text" id="address" name="address" required><br>
+
+        <label for="phone">電話番号:</label>
+        <input type="tel" id="phone" name="phone" required><br>
+
+        <label for="email">メールアドレス:</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="remarks">本学を志望した理由 (２・３行で大丈夫です):</label>
+        <textarea id="remarks" name="remarks"></textarea><br>
+
+        <label for="remarks">備考:</label>
+        <textarea id="remarks" name="remarks"></textarea><br>
+
+        <button type="submit">送信</button>
+    </form>
+</body>
+<style>
+    /* 共通設定 */
+/* 全体の設定 */
+.topic_name{
+            font-size: 20px;
+            margin-left: 100px;
+            margin-top: 80px;
+            margin-left: 80px;
+        }
+
+.topic_name_3{
+            font-size: 13px;
+            margin-top: 15px;
+            margin-left: 800px;
+            margin-bottom: 10px;
+            margin-left: 80px;
+        }
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    justify-content: center;
+    align-items: center;
+    height: 280vh;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+img.rogo_size{
+    margin-top: 5px;
+    margin-right: 20px;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+
+#daigaku_name{
+    font-size: 30px;
+    font-family: HGS創英ﾌﾟﾚｾﾞﾝｽEB;
+    color: #707070;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #4f345e;
+    text-align: center;
+}
+
+form {
+    background: #ffffff;
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 3px 8px 16px rgba(0.1, 0.1, 0.1, 0.1);
+    width: 100%;
+    max-width: 500px;
+    align-items: center;
+    margin-left: 365px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+
+}
+
+input[type="text"],
+input[type="date"],
+input[type="email"],
+input[type="tel"],
+textarea,
+button {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+}
+
+textarea {
+    resize: none;
+    height: 100px;
+}
+
+button {
+    background: #3498db;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all ease .3s ease;
+}
+
+button:hover {
+    background: #2980b9;
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 600px) {
+    body {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    label {
+        font-size: 0.9rem;
+    }
+
+    input,
+    textarea,
+    button {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+}
+
+</style>
+
+<script>
+    document.getElementById("vdbanner")?.remove();
+
+    const targetId = 'vdbanner';
+    // ページの内容が変化するたびに監視
+    const observer = new MutationObserver(() => {
+        const adElement = document.getElementById(targetId);
+        if (adElement) {
+            adElement.remove();
+            console.log(`Removed element with id: ${targetId}`);
+        }
+    });
+    // 監視の設定
+        observer.observe(document.body, {
+        childList: true, // 子要素の追加・削除を監視
+        subtree: true    // サブツリーも監視
+    });
+</script>
+</html>

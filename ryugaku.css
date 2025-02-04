@@ -1,0 +1,564 @@
+@charset "utf-8";
+
+body{
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 2px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-track {
+    opacity: 80%;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #5c0656;
+    opacity: 80%;
+}
+
+.fast_view{
+    margin: auto 0;
+}
+
+img#rogo_size {
+    margin-top: 20px;
+    margin-left: 40px;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+
+#daigaku_name{
+    list-style: none;
+    text-decoration: none;
+    font-size: 30px;
+    font-family: HGS創英ﾌﾟﾚｾﾞﾝｽEB;
+    color: #707070;
+    flex-grow: 1; /* タイトルが余白を広げる */
+    cursor: pointer;
+    position: absolute;
+    top: 33px;
+    left: 120px;
+}
+.dropdown:hover{
+    color: #661c72;
+}
+
+.hr_open li{
+    border:solid #333 1px;
+    width: 400px;
+    height: 50px;
+    font-size: 12px;
+    padding-left: 20px;
+    padding-top: 14px;
+    
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em 1em;
+    color: rgb(0, 0, 0);
+    position: relative;
+    left: -80px;
+    z-index: 10;
+}
+
+.nav-links ul {
+    display: flex;
+    list-style: none;
+    margin-left: 520px;
+    margin-top: -53px;
+    padding: 0;
+}
+
+.nav-links ul li {
+    position: relative;
+    margin-left: 2.5em;
+    letter-spacing: 2px;
+    top: 15px;
+    left: -15px;
+}
+
+.nav-links ul li a:hover{
+    color: #801890;
+    transition: all ease 0.3s;
+}
+
+.nav-links ul li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 12px;
+    font-weight: bold;
+    transition: all ease 0.3s;
+}
+
+.dropdown-content {
+    display: none;
+    position: fixed; /* 固定配置に変更 */
+    top: 74px;
+    left: 0;
+    width: 100vw; /* 画面全体の横幅を占有 */
+    height: 100vh; /* 画面全体の高さを占有 */  
+    background-color: rgba(244, 244, 244, 0.98); /* 少し透明感を持たせる */  
+    color: black;
+    overflow-y: auto;
+    padding: 2em;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+.dropdown-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 50px;
+    left: 400px;
+}
+
+.dropdown-content ul li {
+    margin-bottom: 1em;
+}
+
+.dropdown-content ul li a {
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+.nav-links ul {
+    display: none;
+    flex-direction: column;
+    background-color: #003366;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 200px;
+}
+
+.nav-links ul.active {
+    display: flex;
+}
+
+.menu-toggle {
+    display: flex;
+}
+}
+
+
+
+.ryugaku_p{
+    margin-top: 100px;
+    margin-left: 50px;
+    font-size: 35px;
+    font-family:  HGS創英ﾌﾟﾚｾﾞﾝｽEB;
+    font-weight: bold;
+    letter-spacing: 1px;
+    opacity: 80%;
+
+}
+
+.ryugaku_p_1{
+    margin-top: 20px;
+    margin-left: 50px;
+    font-size: 15px;
+    letter-spacing: 1px;
+    opacity: 80%;
+}
+
+.ryugaku_p_1 p{
+    margin-top: 20px;
+    margin-left: 50px;
+    font-size: 15px;
+    letter-spacing: 1px;
+    opacity: 80%;
+}
+
+.ryugaku_p_2{
+    margin-top: 50px;
+    margin-left: 50px;
+    font-family:  HGS創英ﾌﾟﾚｾﾞﾝｽEB;
+}
+
+.ryugaku_div{
+    display: flex;
+}
+
+.ryugaku_div img{
+    width: 150px;
+    height: 150px;
+    border-radius: 15px;
+    margin-left: 20px;
+    margin-top: 15px;
+}
+
+button{
+    font-weight: bold;
+    border-radius: 5px;
+    width: 400px;
+    height: 50px;
+    background-color: #801890;
+    color: #fff;
+    margin-top: 10px;
+    margin-left: 50px;
+    transition: all ease 0.5s;
+}
+
+button:hover{
+    background-color: #333;
+    transform: translateX(-5px);
+    transition: all ease 0.5s;
+}
+
+a p{
+    transition: all ease 0.5s;
+}
+
+a p:hover{
+    transform: translateX(-5px);
+    transition: all ease 0.5s;
+}
+
+/*footer*/
+
+.gakka_name{
+    margin-left: 60px;
+    margin-top: 80px;
+    margin-bottom: 40px;
+    font-size: 40px;
+    font-family: HGS創英ﾌﾟﾚｾﾞﾝｽEB;
+    opacity:60%;
+}
+
+.gakka_name_1{
+    margin-left: 60px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    font-size: 40px;
+    font-family: HGS創英ﾌﾟﾚｾﾞﾝｽEB;
+    opacity:60%;
+}
+
+.rogo_fotter{
+    display: flex;
+    margin-top: 10px;
+}
+
+.rogo_fotter img{
+    width: 50px;
+    height: 50px;
+    margin-left: 35px;
+}
+
+.rogo_fotter p{
+    margin: auto 0;
+    margin-left: 10px;
+    font-size: 25px;
+    font-family: HGS創英ﾌﾟﾚｾﾞﾝｽEB;
+    opacity: 50%;
+}
+
+.footer_img img{
+    width: 100%;
+    height: 460px;
+    position: absolute;
+    opacity: 70%;
+}
+
+.sns_logo{
+    align-items: center;
+    text-align: center;
+}
+
+.sns_logo img{
+    box-shadow: rgba(0, 0, 0, 0.2);
+    position: relative;
+    color: #fff;
+    top: 380px;
+    width: 45px;
+    height: 45px;
+    margin-left: 40px;
+    z-index: 10;
+    color: #fff;
+    cursor: pointer;
+}
+
+.sns_logo img:hover{
+    color: #fff;
+    transition: all ease 0.5s;
+    transform: translateY(-5px);
+}
+
+footer{
+    z-index: 9;
+}
+
+.ryugaku_ppp{
+    margin-top: 35px;
+    margin-left: 50px;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+table {
+    border-collapse: collapse;
+    text-align: center;
+    width: 850px;
+    height: 300px;
+    margin-top: 20px;
+    margin-left: 50px;
+  }
+  th, td {
+    padding: 5px;
+    border: 1px solid #333;
+  }
+
+  /* トップへ戻るボタンのスタイル */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #5e2073;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    width: 50px;
+    height: 50px;
+    display: none; /* 初期状態は非表示 */
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+    z-index: 100;
+  }
+  
+  .back-to-top:hover {
+    background-color: #9e38ac;
+    transform: scaleY(-5px);
+  }
+  
+  .back-to-top.show {
+    display: flex; /* 表示 */
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+  }
+  
+  .back-to-top.hide {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  .button_p{
+    display: flex;
+    margin-top: 20px;
+  }
+
+  .button_p p{
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 8px;
+    background-color: #801890;
+    color: #fff;
+    margin-left: 50px;
+    text-align: center;
+    width: 145px;
+    height: 40px;
+    padding-top: 10px;
+    transition: all ease 0.5s;
+    cursor: pointer;
+  }
+
+  .button_p p:hover{
+    background-color: #333;
+    transform: translateY(-5px);
+    transition: all ease 0.5s;
+  }
+
+  .opencamapas_class_class img{
+    width: 250px;
+    height: 200px;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+
+  .button_yoyaku_yoyaku{
+    width: 150px;
+    height: 40px;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 3px;
+    background-color: #9e38ac;
+    color: #fff;
+    text-align: center;
+    margin-left: -10px;
+    margin-top: 20px;
+    transition: all ease 0.5s;
+    border-radius: 10px;
+  }
+
+  .button_yoyaku_yoyaku:hover{
+    background-color: #333;
+    transform: translateY(-5px);
+    transition: all ease 0.5s;
+  }
+
+.opencamapas_class_class{
+    width: 300px;
+    height: 380px;
+    background-color: #f3f3f3;
+    text-align: center;
+    justify-content: center;
+    padding-top: 20px;
+    border-radius: 15px;
+}
+
+.opencamapas_class_class p{
+    margin-top: 10px;
+    font-size: 8px;
+}
+
+.opencamapas_ibento_kakoi{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    gap: 20px;
+    width: 1200px;
+    margin-left: 80px;
+    margin-top: 40px;
+}
+
+.nyugakusiki{
+    display: flex;
+    text-align: center;
+}
+
+.nyugakusiki p{
+    width: 250px;
+    height: 50px;
+    background-color: #9e38ac;
+    color: #fff;
+    margin-top: 50px;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 15px;
+    cursor: pointer;
+    transition: all ease 0.5s;
+}
+
+.nyugakusiki p:hover{
+    background-color: #333;
+    transform: translateY(-5px);
+    transition: all ease 0.5s;
+    border-radius: 30px;
+}
+
+.nyugakusiki_1{
+    display: flex;
+    margin-left: 50px;
+}
+
+.nyugakusiki_1 p{
+    width: 230px;
+    height: 50px;
+    background-color: #9e38ac;
+    color: #fff;
+    margin-top: 50px;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 15px;
+    cursor: pointer;
+    transition: all ease 0.5s;
+}
+
+.nyugakusiki_1 p:hover{
+    background-color: #333;
+    transform: translateY(-5px);
+    transition: all ease 0.5s;
+    border-radius: 30px;
+}
+
+.daigaku_nyuusi_img img{
+    width: 500px;
+    height: 300px;
+    transition: 1s all;
+}
+
+.daigaku_nyuusi_img {
+    width: 500px;
+    height: 300px;
+    transition: 1s all;
+    overflow:hidden;
+}
+
+.daigaku{
+    display: flex;
+    margin-top: 40px;
+    margin-left: 50px;
+}
+
+.daigaku_1{
+    width: 550px;
+    height: 300px;
+    border: solid 1px;
+    border-left: none;
+
+}
+
+.daigaku_1 p{
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+    font-family: HGS創英ﾌﾟﾚｾﾞﾝｽEB;
+    margin-top: 50px;
+    opacity: 70%;
+}
+
+.daigaku_1 button{
+    width: 200px;
+    height: 55px;
+    text-align: center;
+    margin-left: 175px;
+    margin-top: 90px;
+    color: #fff;
+    background-color: #9e38ac;
+    align-items: center;
+    justify-content: center;
+}
+
+.daigaku_nyuusi_img img:hover{
+    transform:scale(1.1,1.1);
+    transition: 1s all;
+}
+
+.daigaku_1 button:hover{
+    background-color: #333;
+    transform: scaleX(-10px);
+}
+
+
