@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-    <link rel="icon" href="img/favicon.ico" type="svg+xml">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
     <link rel="stylesheet" href="main.js">
     <link rel="stylesheet" href="style.css">
     <title>紫苑大学</title>
@@ -694,35 +694,6 @@
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
-
-        document.getElementById("vdbanner")?.remove();
-
-        const targetId = 'vdbanner';
-        // ページの内容が変化するたびに監視
-        const observer = new MutationObserver(() => {
-            const adElement = document.getElementById(targetId);
-            if (adElement) {
-                adElement.remove();
-                console.log(`Removed element with id: ${targetId}`);
-            }
-        });
-        // 監視の設定
-            observer.observe(document.body, {
-            childList: true, // 子要素の追加・削除を監視
-            subtree: true    // サブツリーも監視
-        });
-        
-        // ローディング画面と背景色をフェードアウトして削除
-        const loading = document.querySelector(".loading");
-
-        //ページの読み込み完了時に処理を実行
-        window.addEventListener("load", () => {
-        //3秒後にローディング画面を非表示にする
-        setTimeout(() => {
-        loading.classList.add("loaded");
-        }, 1000);
-        });
-
 
         //画像を切り替えるjs
         document.addEventListener("DOMContentLoaded", () => {
